@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #008cff;
+
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 32px;
+
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-libre: "Libre Baskerville", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
