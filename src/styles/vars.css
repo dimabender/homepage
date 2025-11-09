@@ -1,4 +1,9 @@
 :root {
+  --color-bg: #f3f3f3;
+  --color-bg-dark: #e5e5e5;
+
+  --color-text: #1a1a1a;
+
   --color-primary: #008cff;
 
   --space-xs: 4px;
@@ -8,13 +13,4 @@
 
   --font-inter: "Inter", system-ui, sans-serif;
   --font-libre: "Libre Baskerville", serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
 }

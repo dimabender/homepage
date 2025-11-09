@@ -1,10 +1,13 @@
 import { Title } from "@solidjs/meta";
+import HeroSection from "@/components/sections/HeroSection";
 
 export default function Home() {
   return (
     <main>
-      <Title>Main</Title>
-      <h1>Main</h1>
+      <div class="container">
+        <Title>Homepage | dimabender</Title>
+        <HeroSection />
+      </div>
     </main>
   );
 }

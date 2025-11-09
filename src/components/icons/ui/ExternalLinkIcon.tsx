@@ -2,7 +2,7 @@ interface Props {
   size?: number;
 }
 
-export default function ExternalLink(props: Props) {
+export default function ExternalLinkIcon(props: Props) {
   const { size = 32 } = props;
 
   return (

@@ -1,12 +1,12 @@
 import { A } from "@solidjs/router";
-import "./Navbar.css";
-import { ExternalLink } from "../icons";
+import { ExternalLinkIcon } from "./icons";
+import "@/styles/components/Navbar.css";
 
 export default function Navbar() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul class="links-list">
           <li>
             <A href="/works">works</A>
           </li>
@@ -18,7 +18,7 @@ export default function Navbar() {
           <li>
             <A href="https://github.com/dimabender/homepage" target="_blank">
               source
-              <ExternalLink size={18} />
+              <ExternalLinkIcon size={18} />
             </A>
           </li>
         </ul>
