@@ -1,5 +1,6 @@
 import { A } from "@solidjs/router";
 import "./Navbar.css";
+import { ExternalLink } from "../icons";
 
 export default function Navbar() {
   return (
@@ -15,8 +16,9 @@ export default function Navbar() {
             </A>
           </li>
           <li>
-            <A href="https://google.com" target="_blank">
+            <A href="https://github.com/dimabender/homepage" target="_blank">
               source
+              <ExternalLink size={18} />
             </A>
           </li>
         </ul>
