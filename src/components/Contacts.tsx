@@ -7,7 +7,7 @@ export default function Contacts() {
     <div class="contacts-container">
       <PhoneIcon size={40} />
       <p>Chat with me</p>
-      <div class="contact-links">
+      <div class="contacts-links">
         <Button
           type="mail"
           title="Mail"

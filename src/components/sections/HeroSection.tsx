@@ -1,4 +1,4 @@
-import Canvas from "../Canvas";
+import Frame from "../Frame";
 import Contacts from "../Contacts";
 import "@/styles/components/sections/HeroSection.css";
 
@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section>
       <div class="hero-container">
-        <Canvas />
+        <Frame frameSize={256} lineSize={32} />
         <div class="hero-content">
           <p>Hi, im Nikita</p>
           <h1>

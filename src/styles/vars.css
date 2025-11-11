@@ -5,11 +5,13 @@
   --color-text: #1a1a1a;
 
   --color-primary: #008cff;
+  --color-primary-muted: #66baff;
 
   --space-xs: 4px;
   --space-s: 8px;
   --space-m: 16px;
   --space-l: 32px;
+  --space-xl: 64px;
 
   --font-inter: "Inter", system-ui, sans-serif;
   --font-libre: "Libre Baskerville", serif;

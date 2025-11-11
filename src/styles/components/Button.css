@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  width: fit-content;
+  background-color: var(--color-text);
+  padding: 8px 16px;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-bg);
+  text-align: center;
+  border-radius: 128px;
+
+  path {
+    stroke: var(--color-bg);
+  }
+}

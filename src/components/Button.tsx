@@ -1,4 +1,6 @@
 import { A } from "@solidjs/router";
+import "@/styles/components/Button.css";
+import { ExternalLinkIcon } from "./icons";
 
 type LinkType = "default" | "external" | "mail";
 
@@ -12,11 +14,21 @@ export default function Button(props: Props) {
   const { type = "default", title, href } = props;
 
   if (type === "mail") {
-    return <a href={href}>{title}</a>;
+    return (
+      <a class="button" href={href}>
+        {title}
+        <ExternalLinkIcon size={16} />
+      </a>
+    );
   } else {
     return (
-      <A href={href} {...(type === "external" && { target: "_blank" })}>
+      <A
+        class="button"
+        href={href}
+        {...(type === "external" && { target: "_blank" })}
+      >
         {title}
+        {type === "external" && <ExternalLinkIcon size={16} />}
       </A>
     );
   }
