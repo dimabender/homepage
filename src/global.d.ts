@@ -1,1 +1,4 @@
-/// <reference types="@solidjs/start/env" />
+interface CareerItem {
+  period: number[];
+  name: string;
+}

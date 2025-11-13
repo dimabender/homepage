@@ -1,12 +1,15 @@
 import Frame from "../Frame";
 import Contacts from "../Contacts";
 import "@/styles/components/sections/HeroSection.css";
+import ThreeCanvas from "../ThreeCanvas";
 
 export default function HeroSection() {
   return (
     <section>
       <div class="hero-container">
-        <Frame frameSize={256} lineSize={32} />
+        <Frame frameSize={256} lineSize={32}>
+          <ThreeCanvas path="/models/scene.gltf" />
+        </Frame>
         <div class="hero-content">
           <p>Hi, im Nikita</p>
           <h1>
