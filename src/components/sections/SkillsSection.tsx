@@ -10,7 +10,12 @@ export default function SkillsSection() {
         <p>The skills, tools, and instincts that drive my work.</p>
       </div>
       <div class="content-container odd">
-        <Frame frameSize={128} lineSize={16} />
+        <Frame
+          frameSize={128}
+          lineSize={16}
+          color="#ffd400"
+          colorMuted="#ffe566"
+        />
         <div class="content-text">
           <p>
             I’m a full-stack developer building reliable, well-structured
@@ -29,7 +34,12 @@ export default function SkillsSection() {
       </div>
       <div class="line" />
       <div class="content-container">
-        <Frame frameSize={128} lineSize={16} />
+        <Frame
+          frameSize={128}
+          lineSize={16}
+          color="#ff5500"
+          colorMuted="#ff9966"
+        />
         <div class="content-text">
           <p>
             I learn quickly, communicate easily, and keep a balance between

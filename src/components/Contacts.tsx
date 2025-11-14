@@ -1,4 +1,3 @@
-import "@/styles/components/Contacts.css";
 import { PhoneIcon } from "./icons";
 import Button from "./Button";
 

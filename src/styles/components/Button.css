@@ -27,11 +27,13 @@
     mix-blend-mode: difference;
   }
 
-  &:hover {
-    &::after {
-      bottom: -20%;
-      left: 20%;
-      width: 60%;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::after {
+        bottom: -20%;
+        left: 20%;
+        width: 60%;
+      }
     }
   }
 

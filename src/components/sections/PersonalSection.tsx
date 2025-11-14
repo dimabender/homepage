@@ -8,7 +8,12 @@ export default function PersonalSection() {
         <p>A glimpse into who I am when I’m not building things.</p>
       </div>
       <div class="content-container odd">
-        <Frame frameSize={128} lineSize={16} />
+        <Frame
+          frameSize={128}
+          lineSize={16}
+          color="#7700ff"
+          colorMuted="#ad66ff"
+        />
         <div class="content-text">
           <p>
             I was born in Latvia and have spent most of my life creating things

@@ -37,11 +37,13 @@
     background-color 0.2s ease,
     color 0.2s ease;
 
-  &:hover {
-    transform: scale(1.15);
-    background-color: var(--color-text);
-    color: var(--color-bg);
-    z-index: 1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.15);
+      background-color: var(--color-text);
+      color: var(--color-bg);
+      z-index: 1;
+    }
   }
 }
 

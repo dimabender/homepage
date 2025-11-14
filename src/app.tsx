@@ -5,6 +5,7 @@ import { Suspense } from "solid-js";
 import Navbar from "./components/Navbar";
 import "./styles/global.css";
 import "./styles/vars.css";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <MetaProvider>
           <Navbar />
           <Suspense>{props.children}</Suspense>
+          <Footer />
         </MetaProvider>
       )}
     >

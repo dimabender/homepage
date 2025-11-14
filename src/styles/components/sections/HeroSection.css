@@ -1,5 +1,6 @@
 .hero-container {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   gap: var(--space-l);
 

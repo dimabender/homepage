@@ -6,10 +6,11 @@ import "@/styles/components/ThreeCanvas.css";
 
 interface Props {
   path: string;
+  size: number;
 }
 
 export default function ThreeCanvas(props: Props) {
-  const { path } = props;
+  const { path, size } = props;
 
   let container!: HTMLDivElement;
 
@@ -18,7 +19,7 @@ export default function ThreeCanvas(props: Props) {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setSize(size, size);
     container.appendChild(renderer.domElement);
 
     const camera = new THREE.PerspectiveCamera(
@@ -36,10 +37,13 @@ export default function ThreeCanvas(props: Props) {
 
     const loader = new GLTFLoader();
 
+    let model: THREE.Group<THREE.Object3DEventMap> | null = null;
+
     loader.load(
       path,
       (gltf) => {
-        const model = gltf.scene;
+        const cloned = gltf.scene.clone(true);
+        model = cloned;
 
         normalizeScene(model, camera, controls);
 
@@ -51,9 +55,10 @@ export default function ThreeCanvas(props: Props) {
       },
     );
 
-    let raf = 0;
+    let rafId: number;
+
     const loop = () => {
-      raf = requestAnimationFrame(loop);
+      rafId = requestAnimationFrame(loop);
       controls.update();
       renderer.render(scene, camera);
     };
@@ -69,23 +74,43 @@ export default function ThreeCanvas(props: Props) {
     ro.observe(container);
 
     onCleanup(() => {
-      cancelAnimationFrame(raf);
+      if (rafId !== undefined) {
+        cancelAnimationFrame(rafId);
+      }
+
       ro.disconnect();
+
+      if (model) {
+        scene.remove(model);
+
+        model.traverse((obj) => {
+          const mesh = obj as THREE.Mesh;
+
+          if (mesh.geometry) {
+            mesh.geometry.dispose();
+          }
+
+          const material = mesh.material as
+            | THREE.Material
+            | THREE.Material[]
+            | undefined;
+
+          if (Array.isArray(material)) {
+            material.forEach((m) => m.dispose());
+          } else if (material) {
+            material.dispose();
+          }
+        });
+
+        model = null;
+      }
+
       controls.dispose();
-      scene.traverse((obj: any) => {
-        if (obj.isMesh) {
-          obj.geometry?.dispose?.();
-          const mats = Array.isArray(obj.material)
-            ? obj.material
-            : [obj.material];
-          mats.forEach((m: any) => {
-            m?.dispose?.();
-          });
-        }
-      });
       renderer.dispose();
-      scene.clear();
-      container.innerHTML = "";
+
+      if (renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement);
+      }
     });
   });
 

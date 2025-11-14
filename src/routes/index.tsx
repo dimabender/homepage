@@ -3,6 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import PersonalSection from "@/components/sections/PersonalSection";
 import CareerSection from "@/components/sections/CareerSection";
+import Socials from "@/components/Socials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <SkillsSection />
         <CareerSection />
         <PersonalSection />
+        <Socials />
       </div>
     </main>
   );

@@ -118,3 +118,29 @@ section {
     }
   }
 }
+
+.contacts-container,
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-m);
+
+  p {
+    font-family: var(--font-libre);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--color-text);
+  }
+
+  path {
+    stroke: var(--color-primary);
+  }
+}
+
+.contacts-links,
+.socials-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+}

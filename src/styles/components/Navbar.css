@@ -44,13 +44,15 @@ header {
           color 0.2s ease;
       }
 
-      &:not(.nav-logo):hover {
-        background-color: var(--color-primary);
-        color: var(--color-bg);
-        transform: scale(1.15);
+      @media (hover: hover) and (pointer: fine) {
+        &:not(.nav-logo):hover {
+          background-color: var(--color-primary);
+          color: var(--color-bg);
+          transform: scale(1.15);
 
-        path {
-          stroke: var(--color-bg);
+          path {
+            stroke: var(--color-bg);
+          }
         }
       }
     }

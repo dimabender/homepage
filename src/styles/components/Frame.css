@@ -9,9 +9,15 @@
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 
-  &:hover {
-    transform: scale(1.15);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.15);
+    }
   }
+}
+
+.pressed {
+  transform: scale(1.15);
 }
 
 .frame {
@@ -24,10 +30,10 @@
   border-radius: 8px;
   background-image: repeating-linear-gradient(
     -45deg,
-    var(--color-primary) 0px,
-    var(--color-primary) var(--s),
-    var(--color-primary-muted) var(--s),
-    var(--color-primary-muted) calc(var(--s) * 2)
+    var(--line-color) 0px,
+    var(--line-color) var(--s),
+    var(--line-color-muted) var(--s),
+    var(--line-color-muted) calc(var(--s) * 2)
   );
   background-size: 200% 100%;
   animation: slideStripes 6s linear infinite;
