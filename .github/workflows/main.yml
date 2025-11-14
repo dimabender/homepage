@@ -1,0 +1,34 @@
+name: Homepage
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '24'
+      - name: Install dependencies
+        run: npm i --legacy-peer-deps
+      - name: Build
+        env:
+          BASE_PATH: /homepage/
+        run: npm run build
+      - name: Create .nojekyll
+        run: touch .output/public/.nojekyll
+      - name: Deploy to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: .output/public

@@ -8,6 +8,7 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   ssr: true,
   server: {
+    baseURL: "/homepage/",
     preset: "static",
     prerender: {
       crawlLinks: true,
