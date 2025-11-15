@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <Router
-      base="/homepage/"
+      base={import.meta.env.SERVER_BASE_URL}
       root={(props) => (
         <MetaProvider>
           <Navbar />
