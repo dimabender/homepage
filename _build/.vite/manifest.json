@@ -50,7 +50,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-aKM2Uv9F.js",
+    "file": "assets/client-C-KwsPHZ.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
