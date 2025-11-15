@@ -2,6 +2,7 @@ import Frame from "../Frame";
 import Contacts from "../Contacts";
 import ThreeCanvas from "../ThreeCanvas";
 import "@/styles/components/sections/HeroSection.css";
+import assetPath from "@/utils/assetPath";
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,7 @@ export default function HeroSection() {
           color="var(--color-primary)"
           colorMuted="var(--color-primary-muted)"
         >
-          <ThreeCanvas path="/models/scene.gltf" size={256} />
+          <ThreeCanvas path={assetPath("/models/scene.gltf")} size={256} />
         </Frame>
         <div class="hero-content">
           <p>Hi, im Nikita</p>
