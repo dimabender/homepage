@@ -1,62 +1,62 @@
 {
-  "_ExternalLinkIcon-BZP6yh7l.js": {
-    "file": "assets/ExternalLinkIcon-BZP6yh7l.js",
+  "_ExternalLinkIcon-BcETRfiB.js": {
+    "file": "assets/ExternalLinkIcon-BcETRfiB.js",
     "name": "ExternalLinkIcon",
     "imports": [
-      "_index-D9GcMyzd.js"
+      "_index-CbgtFcvX.js"
     ]
   },
   "_HttpStatusCode-DjTx85av.js": {
     "file": "assets/HttpStatusCode-DjTx85av.js",
     "name": "HttpStatusCode"
   },
-  "_index-D9GcMyzd.js": {
-    "file": "assets/index-D9GcMyzd.js",
+  "_index-CbgtFcvX.js": {
+    "file": "assets/index-CbgtFcvX.js",
     "name": "index"
   },
   "src/routes/[...404].tsx?pick=default&pick=$css": {
-    "file": "assets/_...404_-Do7mW9bW.js",
+    "file": "assets/_...404_-DWVR2dlr.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-D9GcMyzd.js",
+      "_index-CbgtFcvX.js",
       "_HttpStatusCode-DjTx85av.js"
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-afFoJaPG.js",
+    "file": "assets/index-BvKk6reU.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-D9GcMyzd.js",
-      "_ExternalLinkIcon-BZP6yh7l.js"
+      "_index-CbgtFcvX.js",
+      "_ExternalLinkIcon-BcETRfiB.js"
     ],
     "css": [
-      "assets/index-BlembFd_.css"
+      "assets/index-BDwGot-4.css"
     ]
   },
   "src/routes/works/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-044hGdmS.js",
+    "file": "assets/index-CiX8xDqm.js",
     "name": "index",
     "src": "src/routes/works/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-D9GcMyzd.js"
+      "_index-CbgtFcvX.js"
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-DP2xF3l2.js",
+    "file": "assets/client-Dzr0WGTx.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_index-D9GcMyzd.js",
-      "_ExternalLinkIcon-BZP6yh7l.js",
+      "_index-CbgtFcvX.js",
+      "_ExternalLinkIcon-BcETRfiB.js",
       "_HttpStatusCode-DjTx85av.js"
     ],
     "dynamicImports": [
@@ -65,7 +65,7 @@
       "src/routes/works/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-B-O31cjk.css"
+      "assets/client-DWbYJnJ-.css"
     ]
   }
 }
