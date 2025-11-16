@@ -1,0 +1,1 @@
+import{i as n,p as i,l,b as s,t as o,T as m}from"./index-D9GcMyzd.js";var p=o("<main><!$><!/><h1>Works");function d(){return(()=>{var e=n(p),r=e.firstChild,[t,a]=i(r.nextSibling);return t.nextSibling,l(e,s(m,{children:"Works | dimabender"}),t,a),e})()}export{d as default};
