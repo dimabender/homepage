@@ -1,6 +1,7 @@
 import "@/styles/components/sections/SkillsSection.css";
 import Frame from "../Frame";
 import Button from "../Button";
+import ThreeCanvas from "../ThreeCanvas";
 
 export default function SkillsSection() {
   return (
@@ -15,7 +16,9 @@ export default function SkillsSection() {
           lineSize={16}
           color="#ffd400"
           colorMuted="#ffe566"
-        />
+        >
+          <ThreeCanvas path="/models/computer/scene.gltf" size={128} />
+        </Frame>
         <div class="content-text">
           <p>
             I’m a full-stack developer building reliable, well-structured
@@ -39,7 +42,9 @@ export default function SkillsSection() {
           lineSize={16}
           color="#ff5500"
           colorMuted="#ff9966"
-        />
+        >
+          <ThreeCanvas path="/models/book/scene.gltf" size={128} />
+        </Frame>
         <div class="content-text">
           <p>
             I learn quickly, communicate easily, and keep a balance between

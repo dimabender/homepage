@@ -13,7 +13,7 @@ export default function HeroSection() {
           color="var(--color-primary)"
           colorMuted="var(--color-primary-muted)"
         >
-          <ThreeCanvas path="/models/scene.gltf" size={256} />
+          <ThreeCanvas path="/models/toy/scene.gltf" size={256} />
         </Frame>
         <div class="hero-content">
           <p>Hi, im Nikita</p>

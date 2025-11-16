@@ -12,6 +12,8 @@ interface Props {
 export default function ThreeCanvas(props: Props) {
   const { path, size } = props;
 
+  const [loading, setLoading] = createSignal(true);
+
   let container!: HTMLDivElement;
 
   onMount(() => {
@@ -48,12 +50,21 @@ export default function ThreeCanvas(props: Props) {
         normalizeScene(model, camera, controls);
 
         scene.add(model);
+
+        setLoading(false);
       },
       undefined,
       (error) => {
         console.error("Error loading model:", error);
       },
     );
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.6);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    dirLight.position.set(2, 4, 3);
+    scene.add(dirLight);
 
     let rafId: number;
 
@@ -115,10 +126,21 @@ export default function ThreeCanvas(props: Props) {
   });
 
   return (
-    <div
-      ref={container}
-      class="canvas"
-      style={{ width: "100%", height: "100%" }}
-    />
+    <>
+      <div
+        ref={container}
+        class="canvas"
+        style={{
+          width: "100%",
+          height: "100%",
+          ...(loading() && { display: "none" }),
+        }}
+      />
+      <Show when={loading()}>
+        <div class="loader-container">
+          <div class="loader" />
+        </div>
+      </Show>
+    </>
   );
 }

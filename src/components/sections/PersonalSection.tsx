@@ -1,4 +1,5 @@
 import Frame from "../Frame";
+import ThreeCanvas from "../ThreeCanvas";
 
 export default function PersonalSection() {
   return (
@@ -13,7 +14,9 @@ export default function PersonalSection() {
           lineSize={16}
           color="#7700ff"
           colorMuted="#ad66ff"
-        />
+        >
+          <ThreeCanvas path="/models/guitar/scene.gltf" size={128} />
+        </Frame>
         <div class="content-text">
           <p>
             I was born in Latvia and have spent most of my life creating things
