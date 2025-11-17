@@ -1,10 +1,56 @@
 import { Title } from "@solidjs/meta";
+import { A } from "@solidjs/router";
+import { For } from "solid-js";
+import "@/styles/works.css";
+import Contacts from "@/components/Contacts";
+import { CaseIcon } from "@/components/icons";
+
+const files = import.meta.glob("@/content/works/*.mdx", {
+  eager: true,
+});
 
 export default function WorksPage() {
+  const works = Object.entries(files).map(([path, mod]) => {
+    const m = mod as WorkModule;
+    const slug = path.split("/").pop()!.replace(".mdx", "");
+
+    return {
+      slug,
+      meta: m.meta,
+    };
+  });
+
+  works.sort((a, b) => b.meta.date.localeCompare(a.meta.date));
+
   return (
     <main>
       <Title>Works | dimabender</Title>
-      <h1>Works</h1>
+      <div class="container">
+        <div class="title-container">
+          <CaseIcon size={40} />
+          <h1>Works</h1>
+        </div>
+        <div class="works-list">
+          <For each={works}>
+            {(work) => (
+              <A class="work-link" href={`/works/${work.slug}`}>
+                <img
+                  alt="work image"
+                  width={300}
+                  height={200}
+                  src={work.meta.image}
+                />
+                <div class="work-text-container">
+                  <h2>{work.meta.title}</h2>
+                  <p>{work.meta.description}</p>
+                  <span>{work.meta.date}</span>
+                </div>
+              </A>
+            )}
+          </For>
+        </div>
+        <Contacts />
+      </div>
     </main>
   );
 }
