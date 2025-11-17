@@ -1,71 +1,135 @@
 {
-  "_ExternalLinkIcon-BcETRfiB.js": {
-    "file": "assets/ExternalLinkIcon-BcETRfiB.js",
+  "_Button-CJzpkZOL.css": {
+    "file": "assets/Button-CJzpkZOL.css",
+    "src": "_Button-CJzpkZOL.css"
+  },
+  "_Button-D3dwWYqu.js": {
+    "file": "assets/Button-D3dwWYqu.js",
+    "name": "Button",
+    "imports": [
+      "_web-Cn8CIRFZ.js",
+      "_ExternalLinkIcon-BxNLGOx2.js"
+    ],
+    "css": [
+      "assets/Button-CJzpkZOL.css"
+    ]
+  },
+  "_Contacts-1pZzkr36.js": {
+    "file": "assets/Contacts-1pZzkr36.js",
+    "name": "Contacts",
+    "imports": [
+      "_web-Cn8CIRFZ.js",
+      "_Button-D3dwWYqu.js"
+    ]
+  },
+  "_ExternalLinkIcon-BxNLGOx2.js": {
+    "file": "assets/ExternalLinkIcon-BxNLGOx2.js",
     "name": "ExternalLinkIcon",
     "imports": [
-      "_index-CbgtFcvX.js"
+      "_web-Cn8CIRFZ.js"
     ]
   },
   "_HttpStatusCode-DjTx85av.js": {
     "file": "assets/HttpStatusCode-DjTx85av.js",
     "name": "HttpStatusCode"
   },
-  "_index-CbgtFcvX.js": {
-    "file": "assets/index-CbgtFcvX.js",
-    "name": "index"
+  "_index-CVpGgBIu.js": {
+    "file": "assets/index-CVpGgBIu.js",
+    "name": "index",
+    "imports": [
+      "_web-Cn8CIRFZ.js"
+    ]
+  },
+  "_portfolio-website-DZ4Hr499.js": {
+    "file": "assets/portfolio-website-DZ4Hr499.js",
+    "name": "portfolio-website",
+    "imports": [
+      "_web-Cn8CIRFZ.js"
+    ]
+  },
+  "_web-Cn8CIRFZ.js": {
+    "file": "assets/web-Cn8CIRFZ.js",
+    "name": "web"
   },
   "src/routes/[...404].tsx?pick=default&pick=$css": {
-    "file": "assets/_...404_-DWVR2dlr.js",
+    "file": "assets/_...404_-Drg_UIJ9.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-CbgtFcvX.js",
+      "_web-Cn8CIRFZ.js",
+      "_index-CVpGgBIu.js",
       "_HttpStatusCode-DjTx85av.js"
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BvKk6reU.js",
+    "file": "assets/index-CTHEwj6p.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-CbgtFcvX.js",
-      "_ExternalLinkIcon-BcETRfiB.js"
+      "_web-Cn8CIRFZ.js",
+      "_index-CVpGgBIu.js",
+      "_Contacts-1pZzkr36.js",
+      "_Button-D3dwWYqu.js",
+      "_ExternalLinkIcon-BxNLGOx2.js"
     ],
     "css": [
-      "assets/index-BDwGot-4.css"
+      "assets/index-DN42_hFK.css"
+    ]
+  },
+  "src/routes/works/[slug].tsx?pick=default&pick=$css": {
+    "file": "assets/_slug_-BNU7Ii6p.js",
+    "name": "_slug_",
+    "src": "src/routes/works/[slug].tsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_portfolio-website-DZ4Hr499.js",
+      "_web-Cn8CIRFZ.js",
+      "_Button-D3dwWYqu.js",
+      "_ExternalLinkIcon-BxNLGOx2.js"
     ]
   },
   "src/routes/works/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-CiX8xDqm.js",
+    "file": "assets/index-Sh4KVYvM.js",
     "name": "index",
     "src": "src/routes/works/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-CbgtFcvX.js"
+      "_portfolio-website-DZ4Hr499.js",
+      "_web-Cn8CIRFZ.js",
+      "_index-CVpGgBIu.js",
+      "_Contacts-1pZzkr36.js",
+      "_ExternalLinkIcon-BxNLGOx2.js",
+      "_Button-D3dwWYqu.js"
+    ],
+    "css": [
+      "assets/index-Zbyf_8Rj.css"
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-Dzr0WGTx.js",
+    "file": "assets/client-B_n3tyoP.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_index-CbgtFcvX.js",
-      "_ExternalLinkIcon-BcETRfiB.js",
+      "_index-CVpGgBIu.js",
+      "_web-Cn8CIRFZ.js",
+      "_ExternalLinkIcon-BxNLGOx2.js",
       "_HttpStatusCode-DjTx85av.js"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx?pick=default&pick=$css",
       "src/routes/index.tsx?pick=default&pick=$css",
+      "src/routes/works/[slug].tsx?pick=default&pick=$css",
       "src/routes/works/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-DWbYJnJ-.css"
+      "assets/client-Bbfsv1NP.css"
     ]
   }
 }
