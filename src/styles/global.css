@@ -242,8 +242,7 @@ section {
   }
 
   img {
-    margin: 0px 64px;
-    width: calc(100% - 128px);
+    width: 100%;
     border-radius: 16px;
   }
 }

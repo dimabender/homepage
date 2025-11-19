@@ -1,4 +1,3 @@
-import career from "@/data/career.json";
 import {
   assignLevels,
   buildYearsIndex,
@@ -11,7 +10,21 @@ import { A } from "@solidjs/router";
 const LABEL_WIDTH = 42;
 const HALF_LABEL = LABEL_WIDTH / 2;
 
+const files = import.meta.glob("@/content/career/*.mdx", {
+  eager: true,
+});
+
 export default function Timeline() {
+  const career = Object.entries(files).map(([path, mod]) => {
+    const m = mod as CareerModule;
+    const slug = path.split("/").pop()!.replace(".mdx", "");
+
+    return {
+      slug,
+      meta: m.meta,
+    };
+  });
+
   const items = assignLevels(career);
   const rowsCount = Math.max(...items.map((i) => i.level)) + 1;
 
@@ -43,7 +56,7 @@ export default function Timeline() {
       >
         <For each={items}>
           {(item) => {
-            const [start, end] = item.period;
+            const [start, end] = item.meta.period;
 
             return (
               <div
@@ -54,8 +67,8 @@ export default function Timeline() {
                   bottom: `calc(var(--row-height) * ${item.level})`,
                 }}
               >
-                <A href="/" class="timeline-link">
-                  {item.name}
+                <A href={`/career/${item.slug}`} class="timeline-link">
+                  {item.meta.title}
                 </A>
               </div>
             );

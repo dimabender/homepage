@@ -1,3 +1,9 @@
+.works-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
 .works-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

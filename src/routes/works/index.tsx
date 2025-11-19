@@ -26,28 +26,30 @@ export default function WorksPage() {
     <main>
       <Title>Works | dimabender</Title>
       <div class="container">
-        <div class="title-container">
-          <CaseIcon size={40} />
-          <h1>Works</h1>
-        </div>
-        <div class="works-list">
-          <For each={works}>
-            {(work) => (
-              <A class="work-link" href={`/works/${work.slug}`}>
-                <img
-                  alt="work image"
-                  width={300}
-                  height={200}
-                  src={work.meta.image}
-                />
-                <div class="work-text-container">
-                  <h2>{work.meta.title}</h2>
-                  <p>{work.meta.description}</p>
-                  <span>{work.meta.date}</span>
-                </div>
-              </A>
-            )}
-          </For>
+        <div class="works-container">
+          <div class="title-container">
+            <CaseIcon size={40} />
+            <h1>Works</h1>
+          </div>
+          <div class="works-list">
+            <For each={works}>
+              {(work) => (
+                <A class="work-link" href={`/works/${work.slug}`}>
+                  <img
+                    alt="work image"
+                    width={300}
+                    height={200}
+                    src={work.meta.image}
+                  />
+                  <div class="work-text-container">
+                    <h2>{work.meta.title}</h2>
+                    <p>{work.meta.description}</p>
+                    <span>{work.meta.date}</span>
+                  </div>
+                </A>
+              )}
+            </For>
+          </div>
         </div>
         <Contacts />
       </div>

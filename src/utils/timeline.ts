@@ -1,5 +1,7 @@
+type CareerItem = { slug: string } & Pick<CareerModule, "meta">;
+
 export function getUniquesYears(career: CareerItem[]): number[] {
-  return [...new Set(career.flatMap((item) => item.period))].sort(
+  return [...new Set(career.flatMap((item) => item.meta.period))].sort(
     (a, b) => a - b,
   );
 }
@@ -18,13 +20,15 @@ export function buildYearsIndex(career: CareerItem[]) {
 export function assignLevels(
   career: CareerItem[],
 ): (CareerItem & { level: number })[] {
-  const sorted = [...career].sort((a, b) => a.period[0] - b.period[0]);
+  const sorted = [...career].sort(
+    (a, b) => a.meta.period[0] - b.meta.period[0],
+  );
 
   const lastEndPerLevel: number[] = [];
   const result: (CareerItem & { level: number })[] = [];
 
   for (const item of sorted) {
-    const [start, end] = item.period;
+    const [start, end] = item.meta.period;
     let level = 0;
 
     while (level < lastEndPerLevel.length && start < lastEndPerLevel[level]) {

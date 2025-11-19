@@ -1,9 +1,12 @@
 import { JSX } from "solid-js";
 
 declare global {
-  interface CareerItem {
-    period: number[];
-    name: string;
+  interface CareerModule {
+    default: () => JSX.Element;
+    meta: {
+      title: string;
+      period: number[];
+    };
   }
 
   interface WorkModule {
