@@ -13,8 +13,8 @@
       "assets/Button-CJzpkZOL.css"
     ]
   },
-  "_Contacts-BbfYEEOL.js": {
-    "file": "assets/Contacts-BbfYEEOL.js",
+  "_Contacts-CxeIcYAl.js": {
+    "file": "assets/Contacts-CxeIcYAl.js",
     "name": "Contacts",
     "imports": [
       "_components-DK50n9Ls.js",
@@ -65,7 +65,7 @@
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-DjsWw7M5.js",
+    "file": "assets/index-BH733usd.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -73,7 +73,7 @@
     "imports": [
       "_components-DK50n9Ls.js",
       "_index-dZx2eKiu.js",
-      "_Contacts-BbfYEEOL.js",
+      "_Contacts-CxeIcYAl.js",
       "_Button-DCgaE4Gj.js",
       "_index-oyeI8q3A.js"
     ],
@@ -95,7 +95,7 @@
     ]
   },
   "src/routes/works/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BH23rfi2.js",
+    "file": "assets/index-C3DQ4PD8.js",
     "name": "index",
     "src": "src/routes/works/index.tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -104,7 +104,7 @@
       "_portfolio-website-Bdy31JiG.js",
       "_components-DK50n9Ls.js",
       "_index-dZx2eKiu.js",
-      "_Contacts-BbfYEEOL.js",
+      "_Contacts-CxeIcYAl.js",
       "_index-oyeI8q3A.js",
       "_Button-DCgaE4Gj.js"
     ],
@@ -113,7 +113,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-OlaJeLro.js",
+    "file": "assets/client-BtzZHa4x.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
