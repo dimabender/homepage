@@ -10,7 +10,7 @@ export default function Contacts() {
         <Button
           type="mail"
           title="Mail"
-          href="mailto:donotforgettochangethisemail@gmail.com"
+          href={`mailto:contact@dimabender.com?subject=${encodeURIComponent("Hello")}&body=${encodeURIComponent("Hey, let's work together.")}`}
         />
         <Button
           type="external"
