@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
-import { ExternalLinkIcon } from "@/components/icons";
-import { A, useParams } from "@solidjs/router";
+import MetaHead from "@/components/MetaHead";
+import { useParams } from "@solidjs/router";
 import { For, Show } from "solid-js";
 
 const files = import.meta.glob("@/content/works/*.mdx", {
@@ -21,6 +21,7 @@ export default function WorkPage() {
 
   return (
     <main>
+      <MetaHead title={mod.meta.title} description={mod.meta.description} />
       <div class="container">
         <div class="blog-container">
           <div class="blog-header">

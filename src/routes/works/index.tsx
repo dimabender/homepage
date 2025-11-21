@@ -1,9 +1,9 @@
-import { Title } from "@solidjs/meta";
 import { A } from "@solidjs/router";
 import { For } from "solid-js";
 import "@/styles/works.css";
 import Contacts from "@/components/Contacts";
 import { CaseIcon } from "@/components/icons";
+import MetaHead from "@/components/MetaHead";
 
 const files = import.meta.glob("@/content/works/*.mdx", {
   eager: true,
@@ -24,7 +24,10 @@ export default function WorksPage() {
 
   return (
     <main>
-      <Title>Works | dimabender</Title>
+      <MetaHead
+        title="Works"
+        description="A collection of my projects, experiments, and builds — the stuff I’ve crafted, shipped, and kept improving over time. Dive in and see what I’ve been working on."
+      />
       <div class="container">
         <div class="works-container">
           <div class="title-container">
