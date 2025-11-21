@@ -4,6 +4,8 @@ import "@/styles/works.css";
 import Contacts from "@/components/Contacts";
 import { CaseIcon } from "@/components/icons";
 import MetaHead from "@/components/MetaHead";
+import Reveal from "@/components/Reveal";
+import formatDate from "@/utils/formatDate";
 
 const files = import.meta.glob("@/content/works/*.mdx", {
   eager: true,
@@ -29,32 +31,36 @@ export default function WorksPage() {
         description="A collection of my projects, experiments, and builds — the stuff I’ve crafted, shipped, and kept improving over time. Dive in and see what I’ve been working on."
       />
       <div class="container">
-        <div class="works-container">
-          <div class="title-container">
-            <CaseIcon size={40} />
-            <h1>Works</h1>
+        <Reveal>
+          <div class="works-container">
+            <div class="title-container">
+              <CaseIcon size={40} />
+              <h1>Works</h1>
+            </div>
+            <div class="works-list">
+              <For each={works}>
+                {(work) => (
+                  <A class="work-link" href={`/works/${work.slug}`}>
+                    <img
+                      alt="work image"
+                      width={300}
+                      height={200}
+                      src={work.meta.image}
+                    />
+                    <div class="work-text-container">
+                      <h2>{work.meta.title}</h2>
+                      <p>{work.meta.description}</p>
+                      <span>{formatDate(work.meta.date)}</span>
+                    </div>
+                  </A>
+                )}
+              </For>
+            </div>
           </div>
-          <div class="works-list">
-            <For each={works}>
-              {(work) => (
-                <A class="work-link" href={`/works/${work.slug}`}>
-                  <img
-                    alt="work image"
-                    width={300}
-                    height={200}
-                    src={work.meta.image}
-                  />
-                  <div class="work-text-container">
-                    <h2>{work.meta.title}</h2>
-                    <p>{work.meta.description}</p>
-                    <span>{work.meta.date}</span>
-                  </div>
-                </A>
-              )}
-            </For>
-          </div>
-        </div>
-        <Contacts />
+        </Reveal>
+        <Reveal>
+          <Contacts />
+        </Reveal>
       </div>
     </main>
   );

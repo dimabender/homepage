@@ -4,8 +4,18 @@ import PersonalSection from "@/components/sections/PersonalSection";
 import CareerSection from "@/components/sections/CareerSection";
 import Socials from "@/components/Socials";
 import MetaHead from "@/components/MetaHead";
+import Reveal from "@/components/Reveal";
+import { For } from "solid-js";
 
 export default function Home() {
+  const sections = [
+    HeroSection,
+    SkillsSection,
+    CareerSection,
+    PersonalSection,
+    Socials,
+  ];
+
   return (
     <main>
       <MetaHead
@@ -13,11 +23,13 @@ export default function Home() {
         description="Full-stack dev from Latvia — projects, experiments, and my journey in code."
       />
       <div class="container">
-        <HeroSection />
-        <SkillsSection />
-        <CareerSection />
-        <PersonalSection />
-        <Socials />
+        <For each={sections}>
+          {(Section) => (
+            <Reveal>
+              <Section />
+            </Reveal>
+          )}
+        </For>
       </div>
     </main>
   );

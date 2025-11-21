@@ -4,9 +4,9 @@ footer {
   padding: var(--space-l);
 
   p {
-    font-family: var(--font-libre);
+    font-family: var(--font-inter);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-text);
     text-align: center;
   }
