@@ -1,114 +1,114 @@
 {
-  "_Contacts-BU8DkidL.js": {
-    "file": "assets/Contacts-BU8DkidL.js",
+  "_Contacts-CT2SmWrO.js": {
+    "file": "assets/Contacts-CT2SmWrO.js",
     "name": "Contacts",
     "imports": [
-      "_components-ClgJdCQz.js",
-      "_MetaHead-DUIFFTEp.js"
+      "_components-CMaRhh8V.js",
+      "_Reveal-CjaPwkne.js"
     ]
   },
   "_HttpStatusCode-DjTx85av.js": {
     "file": "assets/HttpStatusCode-DjTx85av.js",
     "name": "HttpStatusCode"
   },
-  "_MetaHead-CJzpkZOL.css": {
-    "file": "assets/MetaHead-CJzpkZOL.css",
-    "src": "_MetaHead-CJzpkZOL.css"
+  "_Reveal-CJzpkZOL.css": {
+    "file": "assets/Reveal-CJzpkZOL.css",
+    "src": "_Reveal-CJzpkZOL.css"
   },
-  "_MetaHead-DUIFFTEp.js": {
-    "file": "assets/MetaHead-DUIFFTEp.js",
-    "name": "MetaHead",
+  "_Reveal-CjaPwkne.js": {
+    "file": "assets/Reveal-CjaPwkne.js",
+    "name": "Reveal",
     "imports": [
-      "_components-ClgJdCQz.js"
+      "_components-CMaRhh8V.js"
     ],
     "css": [
-      "assets/MetaHead-CJzpkZOL.css"
+      "assets/Reveal-CJzpkZOL.css"
     ]
   },
-  "_components-ClgJdCQz.js": {
-    "file": "assets/components-ClgJdCQz.js",
+  "_components-CMaRhh8V.js": {
+    "file": "assets/components-CMaRhh8V.js",
     "name": "components"
   },
-  "_index-CuyxSXQQ.js": {
-    "file": "assets/index-CuyxSXQQ.js",
-    "name": "index",
+  "_formatDate-DCPzEL5V.js": {
+    "file": "assets/formatDate-DCPzEL5V.js",
+    "name": "formatDate",
     "imports": [
-      "_components-ClgJdCQz.js"
+      "_index-DM5CcLwo.js",
+      "_components-CMaRhh8V.js"
     ]
   },
-  "_portfolio-website-IhTelQTB.js": {
-    "file": "assets/portfolio-website-IhTelQTB.js",
-    "name": "portfolio-website",
+  "_index-DM5CcLwo.js": {
+    "file": "assets/index-DM5CcLwo.js",
+    "name": "index",
     "imports": [
-      "_index-CuyxSXQQ.js",
-      "_components-ClgJdCQz.js"
+      "_components-CMaRhh8V.js"
     ]
   },
   "src/routes/[...404].tsx?pick=default&pick=$css": {
-    "file": "assets/_...404_-Dwmy385b.js",
+    "file": "assets/_...404_-zuW_cyKw.js",
     "name": "_...404_",
     "src": "src/routes/[...404].tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_components-ClgJdCQz.js",
-      "_MetaHead-DUIFFTEp.js",
+      "_components-CMaRhh8V.js",
+      "_Reveal-CjaPwkne.js",
       "_HttpStatusCode-DjTx85av.js"
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-jxaiEhpx.js",
+    "file": "assets/index-YN2FQya9.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_components-ClgJdCQz.js",
-      "_Contacts-BU8DkidL.js",
-      "_MetaHead-DUIFFTEp.js",
-      "_index-CuyxSXQQ.js"
+      "_components-CMaRhh8V.js",
+      "_Contacts-CT2SmWrO.js",
+      "_Reveal-CjaPwkne.js",
+      "_index-DM5CcLwo.js"
     ],
     "css": [
       "assets/index-DN42_hFK.css"
     ]
   },
   "src/routes/works/[slug].tsx?pick=default&pick=$css": {
-    "file": "assets/_slug_-DUKObnLN.js",
+    "file": "assets/_slug_-DybBK8AY.js",
     "name": "_slug_",
     "src": "src/routes/works/[slug].tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_portfolio-website-IhTelQTB.js",
-      "_components-ClgJdCQz.js",
-      "_MetaHead-DUIFFTEp.js",
-      "_index-CuyxSXQQ.js"
+      "_formatDate-DCPzEL5V.js",
+      "_components-CMaRhh8V.js",
+      "_Reveal-CjaPwkne.js",
+      "_index-DM5CcLwo.js"
     ]
   },
   "src/routes/works/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BrM85kLN.js",
+    "file": "assets/index-qVWvPA2M.js",
     "name": "index",
     "src": "src/routes/works/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_portfolio-website-IhTelQTB.js",
-      "_components-ClgJdCQz.js",
-      "_Contacts-BU8DkidL.js",
-      "_MetaHead-DUIFFTEp.js",
-      "_index-CuyxSXQQ.js"
+      "_formatDate-DCPzEL5V.js",
+      "_components-CMaRhh8V.js",
+      "_Contacts-CT2SmWrO.js",
+      "_Reveal-CjaPwkne.js",
+      "_index-DM5CcLwo.js"
     ],
     "css": [
       "assets/index-Nbe9W3lM.css"
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-DjDwBoR0.js",
+    "file": "assets/client-BNZoCYx6.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_components-ClgJdCQz.js",
+      "_components-CMaRhh8V.js",
       "_HttpStatusCode-DjTx85av.js"
     ],
     "dynamicImports": [
@@ -118,7 +118,7 @@
       "src/routes/works/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-BDYH3Gh2.css"
+      "assets/client-eFxR8WpI.css"
     ]
   }
 }
