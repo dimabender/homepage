@@ -6,6 +6,7 @@ declare global {
     meta: {
       title: string;
       period: number[];
+      type: "work" | "education";
     };
   }
 

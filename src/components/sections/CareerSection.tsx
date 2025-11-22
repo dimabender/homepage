@@ -1,4 +1,3 @@
-import "@/styles/components/sections/HeroSection.css";
 import Timeline from "../Timeline";
 
 export default function CareerSection() {

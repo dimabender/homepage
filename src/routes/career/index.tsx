@@ -1,7 +1,7 @@
 import { A } from "@solidjs/router";
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import Contacts from "@/components/Contacts";
-import { PuzzleIcon } from "@/components/icons";
+import { CaseIcon, PuzzleIcon, SchoolIcon } from "@/components/icons";
 import MetaHead from "@/components/MetaHead";
 import Reveal from "@/components/Reveal";
 import "@/styles/career.css";
@@ -25,7 +25,10 @@ export default function CareerPage() {
 
   return (
     <main>
-      <MetaHead title="Career" description="" />
+      <MetaHead
+        title="Career"
+        description="A quick overview of my journey — where I studied, worked, and leveled up along the way."
+      />
       <div class="container">
         <Reveal>
           <div class="career-container">
@@ -37,10 +40,18 @@ export default function CareerPage() {
               <For each={career}>
                 {(career) => (
                   <A class="career-link" href={`/career/${career.slug}`}>
-                    <h2>{career.meta.title}</h2>
-                    <span>
-                      {career.meta.period[0]}-{career.meta.period[1]}
-                    </span>
+                    <Show when={career.meta.type === "work"}>
+                      <CaseIcon size={40} />
+                    </Show>
+                    <Show when={career.meta.type === "education"}>
+                      <SchoolIcon size={40} />
+                    </Show>
+                    <div class="career-link-text">
+                      <h2>{career.meta.title}</h2>
+                      <span>
+                        {career.meta.period[0]}-{career.meta.period[1]}
+                      </span>
+                    </div>
                   </A>
                 )}
               </For>

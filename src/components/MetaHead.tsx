@@ -4,7 +4,7 @@ import { Show } from "solid-js";
 
 interface Props {
   title: string;
-  description: string;
+  description?: string;
   image?: string;
 }
 
@@ -21,10 +21,12 @@ export default function MetaHead(props: Props) {
       <Title>{formatedTitle}</Title>
       <Meta name="title" content={formatedTitle} />
       <Meta property="og:title" content={formatedTitle} />
-      <Meta name="description" content={description} />
-      <Meta property="og:description" content={description} />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content={url()} />
+      <Show when={description}>
+        <Meta name="description" content={description!} />
+        <Meta property="og:description" content={description!} />
+      </Show>
       <Show when={image}>
         <Meta property="og:image" content={image!} />
       </Show>

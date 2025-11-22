@@ -6,6 +6,7 @@ import {
 import { For } from "solid-js";
 import "@/styles/components/Timeline.css";
 import { A } from "@solidjs/router";
+import truncate from "@/utils/truncate";
 
 const LABEL_WIDTH = 42;
 const HALF_LABEL = LABEL_WIDTH / 2;
@@ -68,7 +69,10 @@ export default function Timeline() {
                 }}
               >
                 <A href={`/career/${item.slug}`} class="timeline-link">
-                  {item.meta.title}
+                  {truncate(
+                    item.meta.title,
+                    16 * (item.meta.period[1] - item.meta.period[0]),
+                  )}
                 </A>
               </div>
             );

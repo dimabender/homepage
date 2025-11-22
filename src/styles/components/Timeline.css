@@ -23,13 +23,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: calc(100% - 8px);
   height: calc(100% - 8px);
   border-radius: 128px;
   background-color: var(--color-bg-dark);
   font-family: var(--font-inter);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--color-text);
   cursor: pointer;
   transition:
