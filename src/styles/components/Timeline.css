@@ -1,8 +1,21 @@
+.timeline-scroll-wrapper {
+  overflow-x: scroll;
+  width: 100%;
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0,
+    black 32px,
+    black calc(100% - 32px),
+    transparent 100%
+  );
+}
+
 .timeline-container {
   display: flex;
   flex-direction: column;
   gap: var(--space-s);
-  width: 100%;
+  width: 800px;
+  margin: 0px 32px;
 }
 
 .timeline-list {

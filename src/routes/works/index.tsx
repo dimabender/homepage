@@ -1,6 +1,5 @@
 import { A } from "@solidjs/router";
 import { For } from "solid-js";
-import "@/styles/works.css";
 import Contacts from "@/components/Contacts";
 import { CaseIcon } from "@/components/icons";
 import MetaHead from "@/components/MetaHead";

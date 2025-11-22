@@ -4,7 +4,6 @@ import Contacts from "@/components/Contacts";
 import { CaseIcon, PuzzleIcon, SchoolIcon } from "@/components/icons";
 import MetaHead from "@/components/MetaHead";
 import Reveal from "@/components/Reveal";
-import "@/styles/career.css";
 
 const files = import.meta.glob("@/content/career/*.mdx", {
   eager: true,

@@ -48,41 +48,43 @@ export default function Timeline() {
   };
 
   return (
-    <div class="timeline-container">
-      <div
-        class="timeline-list"
-        style={{
-          "--rows": rowsCount,
-        }}
-      >
-        <For each={items}>
-          {(item) => {
-            const [start, end] = item.meta.period;
-
-            return (
-              <div
-                class="timeline-item"
-                style={{
-                  left: calcLeft(start),
-                  width: calcWidth(start, end),
-                  bottom: `calc(var(--row-height) * ${item.level})`,
-                }}
-              >
-                <A href={`/career/${item.slug}`} class="timeline-link">
-                  {truncate(
-                    item.meta.title,
-                    16 * (item.meta.period[1] - item.meta.period[0]),
-                  )}
-                </A>
-              </div>
-            );
+    <div class="timeline-scroll-wrapper">
+      <div class="timeline-container">
+        <div
+          class="timeline-list"
+          style={{
+            "--rows": rowsCount,
           }}
-        </For>
-      </div>
-      <div class="years-container">
-        <For each={getUniquesYears(career)}>
-          {(year) => <span>{year}</span>}
-        </For>
+        >
+          <For each={items}>
+            {(item) => {
+              const [start, end] = item.meta.period;
+
+              return (
+                <div
+                  class="timeline-item"
+                  style={{
+                    left: calcLeft(start),
+                    width: calcWidth(start, end),
+                    bottom: `calc(var(--row-height) * ${item.level})`,
+                  }}
+                >
+                  <A href={`/career/${item.slug}`} class="timeline-link">
+                    {truncate(
+                      item.meta.title,
+                      16 * (item.meta.period[1] - item.meta.period[0]),
+                    )}
+                  </A>
+                </div>
+              );
+            }}
+          </For>
+        </div>
+        <div class="years-container">
+          <For each={getUniquesYears(career)}>
+            {(year) => <span>{year}</span>}
+          </For>
+        </div>
       </div>
     </div>
   );
