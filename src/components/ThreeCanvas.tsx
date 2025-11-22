@@ -18,19 +18,15 @@ export default function ThreeCanvas(props: Props) {
 
   onMount(() => {
     const scene = new THREE.Scene();
-
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(size, size);
+
+    const w0 = container.clientWidth || size;
+    const h0 = container.clientHeight || size;
+    renderer.setSize(w0, h0);
     container.appendChild(renderer.domElement);
 
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      container.clientWidth / container.clientHeight,
-      0.1,
-      1000,
-    );
-
+    const camera = new THREE.PerspectiveCamera(75, w0 / h0, 0.1, 1000);
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enablePan = false;
@@ -38,36 +34,24 @@ export default function ThreeCanvas(props: Props) {
     controls.maxDistance = 4;
 
     const loader = new GLTFLoader();
+    let model: THREE.Group | null = null;
+    let alive = true;
 
-    let model: THREE.Group<THREE.Object3DEventMap> | null = null;
+    loader.load(path, (gltf) => {
+      if (!alive) return;
 
-    loader.load(
-      path,
-      (gltf) => {
-        const cloned = gltf.scene.clone(true);
-        model = cloned;
+      model = gltf.scene.clone(true);
+      normalizeScene(model, camera, controls);
+      scene.add(model);
+      setLoading(false);
+    });
 
-        normalizeScene(model, camera, controls);
-
-        scene.add(model);
-
-        setLoading(false);
-      },
-      undefined,
-      (error) => {
-        console.error("Error loading model:", error);
-      },
-    );
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.6);
-    scene.add(ambientLight);
-
+    scene.add(new THREE.AmbientLight(0xffffff, 1.6));
     const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
     dirLight.position.set(2, 4, 3);
     scene.add(dirLight);
 
-    let rafId: number;
-
+    let rafId = 0;
     const loop = () => {
       rafId = requestAnimationFrame(loop);
       controls.update();
@@ -85,38 +69,36 @@ export default function ThreeCanvas(props: Props) {
     ro.observe(container);
 
     onCleanup(() => {
-      if (rafId !== undefined) {
-        cancelAnimationFrame(rafId);
-      }
-
+      alive = false;
+      cancelAnimationFrame(rafId);
       ro.disconnect();
 
       if (model) {
         scene.remove(model);
 
+        const disposeMaterial = (mat: THREE.Material) => {
+          for (const key in mat) {
+            const value = (mat as any)[key];
+            if (value?.isTexture) value.dispose();
+          }
+          mat.dispose();
+        };
+
         model.traverse((obj) => {
           const mesh = obj as THREE.Mesh;
-
-          if (mesh.geometry) {
-            mesh.geometry.dispose();
-          }
-
-          const material = mesh.material as
-            | THREE.Material
-            | THREE.Material[]
-            | undefined;
-
-          if (Array.isArray(material)) {
-            material.forEach((m) => m.dispose());
-          } else if (material) {
-            material.dispose();
-          }
+          mesh.geometry?.dispose();
+          const mat = mesh.material;
+          if (Array.isArray(mat)) mat.forEach(disposeMaterial);
+          else if (mat) disposeMaterial(mat);
         });
 
         model = null;
       }
 
       controls.dispose();
+
+      renderer.renderLists.dispose();
+      renderer.forceContextLoss();
       renderer.dispose();
 
       if (renderer.domElement.parentNode === container) {
