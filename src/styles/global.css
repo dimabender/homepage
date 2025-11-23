@@ -19,6 +19,7 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
+  min-height: calc(100vh - 93.5px);
 }
 
 section {
