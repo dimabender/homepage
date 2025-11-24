@@ -47,8 +47,8 @@
       "_routing-BkGMggUh.js"
     ]
   },
-  "_formatDate-Cvn2kJdj.js": {
-    "file": "assets/formatDate-Cvn2kJdj.js",
+  "_formatDate-BzyIAXXT.js": {
+    "file": "assets/formatDate-BzyIAXXT.js",
     "name": "formatDate",
     "imports": [
       "_index-DElkqUC0.js",
@@ -138,13 +138,13 @@
     ]
   },
   "src/routes/works/[slug].tsx?pick=default&pick=$css": {
-    "file": "assets/_slug_-BmqRgfOQ.js",
+    "file": "assets/_slug_-C72-34lY.js",
     "name": "_slug_",
     "src": "src/routes/works/[slug].tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_formatDate-Cvn2kJdj.js",
+      "_formatDate-BzyIAXXT.js",
       "_routing-BkGMggUh.js",
       "_Button-Dmb38gAD.js",
       "_Reveal-B42s45qE.js",
@@ -153,13 +153,13 @@
     ]
   },
   "src/routes/works/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BED8elHl.js",
+    "file": "assets/index-CIozjoTl.js",
     "name": "index",
     "src": "src/routes/works/index.tsx?pick=default&pick=$css",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_formatDate-Cvn2kJdj.js",
+      "_formatDate-BzyIAXXT.js",
       "_routing-BkGMggUh.js",
       "_Contacts-BDielOaS.js",
       "_CaseIcon-kU6RZwzX.js",
@@ -170,7 +170,7 @@
     ]
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-j0eZ1yHN.js",
+    "file": "assets/client-R3lwtnfO.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
