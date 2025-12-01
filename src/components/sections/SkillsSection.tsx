@@ -14,8 +14,8 @@ export default function SkillsSection() {
         <Frame
           frameSize={128}
           lineSize={16}
-          color="#ffd400"
-          colorMuted="#ffe566"
+          color="#ffe566"
+          colorMuted="#ffee99"
         >
           <ThreeCanvas path="/models/computer/scene.gltf" size={128} />
         </Frame>
@@ -40,8 +40,8 @@ export default function SkillsSection() {
         <Frame
           frameSize={128}
           lineSize={16}
-          color="#ff5500"
-          colorMuted="#ff9966"
+          color="#ff9966"
+          colorMuted="#ffbb99"
         >
           <ThreeCanvas path="/models/book/scene.gltf" size={128} />
         </Frame>

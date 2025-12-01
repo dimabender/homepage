@@ -21,12 +21,38 @@ export default createHandler(() => (
           />
           <script
             innerHTML={`
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ucbe1gfmtu");
-`}
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "ucbe1gfmtu");
+            `}
+          />
+          <script
+            innerHTML={`
+            (function () {
+                var STORAGE_KEY = "theme";
+
+                function getPreferredTheme() {
+                  try {
+                    var stored = localStorage.getItem(STORAGE_KEY);
+                    if (stored === "light" || stored === "dark") return stored;
+                  } catch (e) {}
+
+                  if (window.matchMedia &&
+                      window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    return "dark";
+                  }
+                  return "light";
+                }
+
+                var theme = getPreferredTheme();
+                var root = document.documentElement;
+
+                root.dataset.theme = theme;
+                root.classList.toggle("dark", theme === "dark");
+              })();
+            `}
           />
           {assets}
         </head>

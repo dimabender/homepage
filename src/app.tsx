@@ -8,15 +8,20 @@ import "./styles/vars.css";
 import "./styles/global.css";
 import "./styles/works.css";
 import "./styles/career.css";
+import Actions from "./components/Actions";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 export default function App() {
   return (
     <Router
       root={(props) => (
         <MetaProvider>
-          <Navbar />
-          <Suspense>{props.children}</Suspense>
-          <Footer />
+          <ThemeProvider>
+            <Navbar />
+            <Actions />
+            <Suspense>{props.children}</Suspense>
+            <Footer />
+          </ThemeProvider>
         </MetaProvider>
       )}
     >

@@ -15,6 +15,13 @@ body {
   background-color: var(--color-bg);
 }
 
+body,
+body * {
+  transition-property: background-color, color, border-color, stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
 main {
   display: flex;
   justify-content: center;

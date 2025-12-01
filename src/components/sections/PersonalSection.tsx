@@ -12,8 +12,8 @@ export default function PersonalSection() {
         <Frame
           frameSize={128}
           lineSize={16}
-          color="#7700ff"
-          colorMuted="#ad66ff"
+          color="#ad66ff"
+          colorMuted="#c999ff"
         >
           <ThreeCanvas path="/models/guitar/scene.gltf" size={128} />
         </Frame>

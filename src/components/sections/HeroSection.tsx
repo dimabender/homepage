@@ -10,8 +10,8 @@ export default function HeroSection() {
         <Frame
           frameSize={256}
           lineSize={32}
-          color="var(--color-primary)"
-          colorMuted="var(--color-primary-muted)"
+          color="#66baff"
+          colorMuted="#99d1ff"
         >
           <ThreeCanvas path="/models/toy/scene.gltf" size={256} />
         </Frame>
