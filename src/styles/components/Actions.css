@@ -1,0 +1,26 @@
+.actions-container {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px;
+  background-color: var(--color-bg-dark);
+  border-radius: 16px;
+  z-index: 1;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    path {
+      stroke: var(--color-bg-dark);
+    }
+  }
+}
