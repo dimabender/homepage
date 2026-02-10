@@ -1,0 +1,30 @@
+.hero-section {
+  --stripes-size: 110px;
+
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  background: repeating-linear-gradient(
+    -45deg,
+    #66baff 25%,
+    #66baff 50%,
+    #99d1ff 50%,
+    #99d1ff 75%
+  );
+  background-size: var(--stripes-size) var(--stripes-size);
+  animation: animateStripes 2s linear infinite;
+}
+
+@keyframes animateStripes {
+  0% {
+    background-position: calc(var(--stripes-size) * -1) 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

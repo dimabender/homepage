@@ -15,12 +15,3 @@
   --font-inter: "Inter", system-ui, sans-serif;
   --font-libre: "Libre Baskerville", serif;
 }
-
-:root[data-theme="dark"] {
-  --color-bg: #1a1a1a;
-  --color-bg-dark: #262626;
-
-  --color-text: #cccccc;
-
-  --color-primary: var(--color-text);
-}
