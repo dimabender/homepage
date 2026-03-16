@@ -9,6 +9,7 @@
   width: 100vw;
   height: 100vh;
   scroll-snap-align: start;
+  scroll-margin-bottom: -64px;
   background: repeating-linear-gradient(
     -45deg,
     #66baff 25%,

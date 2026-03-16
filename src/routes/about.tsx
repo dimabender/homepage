@@ -5,7 +5,7 @@ export default function About() {
     <main>
       <Title>About</Title>
       <div class="container">
-        <h1>About</h1>
+        <h2>About</h2>
       </div>
     </main>
   );

@@ -1,16 +1,19 @@
 :root {
   --color-bg: #f3f3f3;
+  --color-bg-alpha: #f3f3f333;
   --color-bg-dark: #e5e5e5;
+  --color-bg-dark-alpha: #e5e5e533;
 
   --color-text: #1a1a1a;
 
   --color-primary: #008cff;
 
-  --space-xs: 4px;
-  --space-s: 8px;
-  --space-m: 16px;
-  --space-l: 32px;
-  --space-xl: 64px;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
+  --space-xxl: 8rem;
 
   --font-inter: "Inter", system-ui, sans-serif;
   --font-libre: "Libre Baskerville", serif;

@@ -1,6 +1,7 @@
 h1,
 h2,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -24,36 +25,31 @@ main.snap {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-
-  scroll-timeline: --container-timeline y;
-  scroll-timeline: --container-timeline vertical;
-}
-
-.snap-container {
-  position: relative;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  max-width: 800px;
-  width: 100%;
-  background-color: var(--color-bg);
-
-  animation: containerAnimation 1ms linear;
-  animation-timeline: --container-timeline;
+  outline: none;
 }
 
 .container {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8rem var(--space-xl);
+  max-width: 768px;
   width: 100%;
   min-height: 200vh;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 8rem var(--space-l);
+  }
+
+  @media (max-width: 425px) {
+    padding: 8rem var(--space-m);
+  }
 }
 
-@keyframes containerAnimation {
-  from {
-    max-width: 800px;
-  }
-
-  to {
-    max-width: 100%;
-  }
+.container.snap {
+  transform: translateY(-64px);
+  margin-bottom: -64px;
+  scroll-snap-align: start;
+  z-index: 2;
 }
