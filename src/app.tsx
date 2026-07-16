@@ -17,10 +17,10 @@ export default function App() {
       root={(props) => (
         <MetaProvider>
           <ThemeProvider>
-            <Navbar />
-            <Actions />
+            {/* <Navbar /> */}
+            {/* <Actions /> */}
             <Suspense>{props.children}</Suspense>
-            <Footer />
+            {/* <Footer /> */}
           </ThemeProvider>
         </MetaProvider>
       )}

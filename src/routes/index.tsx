@@ -5,15 +5,17 @@ import CareerSection from "@/components/sections/CareerSection";
 import Socials from "@/components/Socials";
 import MetaHead from "@/components/MetaHead";
 import Reveal from "@/components/Reveal";
+import PageStub from "@/components/sections/PageStub";
 import { For } from "solid-js";
 
 export default function Home() {
   const sections = [
-    HeroSection,
-    SkillsSection,
-    CareerSection,
-    PersonalSection,
-    Socials,
+    // HeroSection,
+    // SkillsSection,
+    // CareerSection,
+    // PersonalSection,
+    // Socials,
+    PageStub,
   ];
 
   return (
